@@ -1,0 +1,20 @@
+html has tags
+
+< text_in_between >
+
+some tags only have open tags
+most tags have open and closing tags
+<meta ..... >
+<img .... >
+____________
+<p></p>
+<section></section>
+
+All tags have attributes
+	-describes and/or modifies the content of the tag
+	- name-value pairs inside of tag 
+
+
+All tags have 2 universal attributes
+	id => unique id on page
+	class => group name/category

@@ -1,0 +1,7 @@
+Style canada.html, usa.html, mexico.html
+
+In main index.html file
+Add Continent of South America
+Add 2 countries + their flags
+
+Add/Change any style you desire
