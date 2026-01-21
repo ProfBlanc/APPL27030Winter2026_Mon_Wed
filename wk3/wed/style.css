@@ -10,7 +10,7 @@
   --muted: #6b7280;
   --border: #e5e7eb;
 }
-
+/* universal selector */
 *,
 *::before,
 *::after {
@@ -38,6 +38,14 @@ h2 {
 
 p {
   margin: 0.5rem 0 1rem;
+  /* padding*/
+
+/*
+              12
+        9           3
+              6
+*/          
+
 }
 
 a {
@@ -89,10 +97,32 @@ section {
   color: white;
   font-weight: 500;
 }
+/*
+.main-nav a {
+  color: red;
+  font-weight: 1500;
+}
+*/
 
 .main-nav a:hover {
   opacity: 0.8;
 }
+/*
+  Quick Question
+
+  - what is more specific, targeting 
+    - tag
+    - a class
+____________________________
+  - what is more specific, targeting 
+    - an id
+    - a class
+____________________________
+  - what is more specific, targeting 
+    - a tag
+    - a nested tag of a class
+
+*/
 
 /* =====================
    MAIN LAYOUT
@@ -311,3 +341,13 @@ textarea:focus {
     flex-direction: column;
   }
 }
+
+/*
+  Rank these selector in terms of order of specificness
+  
+  - child selector
+  - decendant selector
+  - attribute selector
+
+
+*/
