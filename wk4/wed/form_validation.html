@@ -53,7 +53,7 @@
 
     <label>
       Full Name (required, min 3 chars)
-      <input type="text" id="fullName">
+      <input type="text" id="fullName" name="fullName">
       <span class="error" id="nameError"></span>
     </label>
 
@@ -165,7 +165,8 @@
 </form>
 
 <script>
-  document.getElementById("demoForm").addEventListener("submit", function (e) {
+  document.getElementById("demoForm").addEventListener("submit", 
+  function (e) {
     e.preventDefault();
 
     let valid = true;
@@ -175,6 +176,10 @@
     document.getElementById("formResult").textContent = "";
 
     // Name
+    let fn1 = document.getElementById("fullName");
+    let fn2 = document.forms[0].fullName;
+    let fn3 = document.getElementsByName("fullName")[0];
+
     const name = fullName.value.trim();
     if (name.length < 3) {
       nameError.textContent = "Name must be at least 3 characters.";
