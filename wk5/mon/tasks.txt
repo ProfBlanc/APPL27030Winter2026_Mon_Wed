@@ -1,0 +1,9 @@
+Task 1
+
+Create a login.php page
+Form: username, password
+
+In PHP check the form and ensure that 
+username is either: admin, user, test
+password is either "pass" or "pass1"
+allow any username and password combination
