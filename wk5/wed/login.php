@@ -12,9 +12,16 @@ $error = isset($_GET['error']) ? $_GET['error'] : '';
 <div class="container">
     <h1>Login</h1>
 
-    <?php if ($error): ?>
+    <!-- <?php if ($error): ?>
         <div class="error"><?php echo htmlspecialchars($error); ?></div>
-    <?php endif; ?>
+    <?php endif; ?> -->
+
+    <?php
+    if($error){
+        echo "<div class='error'>". htmlspecialchars($error) . "</div>";
+    }
+
+?>
 
     <form method="post" action="process_login.php">
         <input type="text" name="username" placeholder="Username" required>

@@ -1,6 +1,6 @@
 Task 1
 
-Add 4 more username-password combinations for logging in
+Add 4 more username-password combinations for logging in (in process_login.php)
 
 Task 2
 
