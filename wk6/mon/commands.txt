@@ -1,0 +1,106 @@
+/*
+make a comment in mysql
+
+database
+	storage of data
+		table
+			columns
+				define name and structure of data
+            rows
+				store actual data
+
+Profile
+ProfileId (dt)		Name (dt)
+1					Ben
+2					John
+4					Mary
+*/
+show databases;
+use world; /*select a database*/
+show tables;
+
+use world;
+describe country;
+
+select * from world.country;
+
+use world;
+select * from country;
+
+use world;
+select `Code`, `Name`, `Continent` from country;
+###########################
+/*drop database if exists awesome_app; */
+create database awesome_app;
+###############################
+show databases;
+use awesome_app;
+/*name datatype([percision]) modifiers*/
+create table if not exists `profile`(
+id int(11) primary key auto_increment,
+username varchar(50) not null unique,
+email varchar(255) not null unique,
+`password` varchar(255) not null
+);
+show tables;
+/*Create the table photo: id, profileId, photo_path*/
+create table if not exists `photo`(
+`id` int primary key auto_increment,
+`profileId` int(11) not null,
+photo_path varchar(255) not null
+);
+##############################
+use awesome_app;
+describe photo;
+describe `profile`;
+########################
+use awesome_app;
+/*
+insert into `profile` (`username`, `email`, `password`) 
+values ("admin", "admin@test.com", "pass1");
+*/
+/*
+insert into `profile` (`username`, `email`, `password`) 
+values ("manager", "manager@test.com", "pass2"), 
+("student", "student@test.com", "pass3");
+*/
+
+select * from `profile`;
+###############################
+/*
+Create: create commant & insert command
+Read: select {*|columns} from {table}
+
+Delete: drop | delete from {table} {condition}
+
+create: create table or data
+insert: create a row in table
+*/
+/*drop database db_to_delete*/;
+/*create database db_to_delete;*/
+
+/*show databases;*/
+/*
+delete from awesome_app.`profile` where id = 3;
+select * from awesome_app.`profile`;
+*/
+
+/*update awesome_app.`profile` set username="team", email="team@test.com" where id=2;*/
+select * from awesome_app.`profile`;
+############################
+/*
+re-insert profile with
+	id=3, username=student, password=pass3
+    
+Create the following entries in photo table
+
+1: profileId=1, photo_path="toronto.jpg"
+2: profileId=2, photo_path="quebec.jpg"
+*/
+insert into `awesome_app`.`profile` (`id`, `username`, `email`, `password`) 
+values (3, "student", "student@test.com", "pass3");
+
+insert into `awesome_app`.`photo` (profileId, photo_path) 
+values (1, "toronto.jpg"), (2, "quebec.jpg");
+
+select * from awesome_app.photo;
