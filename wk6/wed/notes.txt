@@ -8,6 +8,6 @@ To enable extensions in php
         open .ini  
             search for extension=mysqli
                         extension=pdo_mysql
-                        extension_dir 
+                        extension_dir = "dir"
 
                         uncomment all lines above

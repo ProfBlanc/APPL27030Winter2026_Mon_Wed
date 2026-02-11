@@ -1,0 +1,29 @@
+show databases;
+
+use awesome_app;
+
+show tables;
+describe profile;
+select * from profile;
+/* select id, username from profile where username='{value}' and password='{value}'*/
+select id, username from profile where username='admin' OR '1'='1' and password='admin' OR '1'='1'
+
+
+#################################################
+
+alter table profile add `random2` varchar(10) after username;
+
+describe profile;
+
+select * from profile;
+
+alter table profile drop column random2, drop random1;
+
+alter table profile add column age tinyint, add height decimal(5,2), add weight decimal(5,2);
+alter table profile drop age, drop height, drop weight;
+/*
+tinyint => int + 127 to -128
+*/
+
+alter table profile add column age tinyint not null default 20, 
+add height decimal(5,2) not null default 100, add weight decimal(5,2) not null default 80;

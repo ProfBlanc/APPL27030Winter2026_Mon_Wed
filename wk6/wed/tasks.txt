@@ -8,7 +8,7 @@ What happens?
 Task 2
 Navigate to search_not_secure.php and type the following text in the search bar
 
-"' UNION SELECT 1, username, password FROM login-- "
+"' UNION SELECT 1, username, password FROM profile -- "
 *remove the opening and closing double quotes. keep space after opening single quote. keep trailing space
 
 Task 3
