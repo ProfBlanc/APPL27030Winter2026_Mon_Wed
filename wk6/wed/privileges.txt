@@ -30,17 +30,17 @@ CREATE USER 'dave'@'localhost' IDENTIFIED BY 'DavePass123!';
 -- ======================================================
 
 -- Alice: Read-only access to entire database
-GRANT SELECT ON company_db.* TO 'alice'@'localhost';
+GRANT SELECT ON company.* TO 'alice'@'localhost';
 
 -- Bob: Can read and insert into employees table only
-GRANT SELECT, INSERT ON company_db.employees TO 'bob'@'localhost';
+GRANT SELECT, INSERT ON company.employees TO 'bob'@'localhost';
 
 -- Carol: Full control on projects table, but nothing else
-GRANT ALL PRIVILEGES ON company_db.projects TO 'carol'@'localhost';
+GRANT ALL PRIVILEGES ON company.projects TO 'carol'@'localhost';
 
 -- Dave: Mixed privileges across database
-GRANT SELECT, UPDATE ON company_db.employees TO 'dave'@'localhost';
-GRANT SELECT ON company_db.projects TO 'dave'@'localhost';
+GRANT SELECT, UPDATE ON company.employees TO 'dave'@'localhost';
+GRANT SELECT ON company.projects TO 'dave'@'localhost';
 
 -- ======================================================
 -- Apply changes
